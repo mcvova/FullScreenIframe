@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+  	<title>FullWidthIframe</title>
+  	<style>
+  		.fullscreenIframe{position:relative;overflow:hidden;}
+  		.fullscreenIframe iframe{position:absolute;top:50%;left:50%;}
+
+  		.block{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+  	</style>
+</head>    
+<body>
+	
+	<div class="block">
+		<iframe src="https://www.youtube.com/embed/Uoa81mxPLq8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/fullscreenIframe.js"></script>
+	<script>
+    $('.block').fullscreenIframe({
+      'aspectRatio':'16:9',
+      'youtube': true
+    });    
+  </script>
+</body>
